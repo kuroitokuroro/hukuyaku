@@ -126,16 +126,22 @@ function createRegularMedicineButton(medicine) {
 
   const isTaken = hasRegularRecordToday(medicine.id);
 
-  if (isTaken) {
-    button.classList.add("taken");
+ if (isTaken) {
+  button.classList.add("taken");
 
-    const heart = document.createElement("span");
-    heart.className = "taken-heart";
-    heart.textContent = "♥";
-    heart.setAttribute("aria-label", "飲みました");
+  button.setAttribute(
+    "aria-label",
+    `${medicine.name}は記録済みです。押すと記録を取り消します`
+  );
 
-    button.appendChild(heart);
-  }
+  const takenIcon = document.createElement("img");
+  takenIcon.className = "taken-icon";
+  takenIcon.src = "icon.png";
+  takenIcon.alt = "";
+  takenIcon.setAttribute("aria-hidden", "true");
+
+  button.appendChild(takenIcon);
+}
 
   const label = document.createElement("span");
   label.textContent = medicine.name;

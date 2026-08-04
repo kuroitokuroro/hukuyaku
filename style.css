@@ -131,19 +131,24 @@ button {
     inset 0 2px 5px rgba(127, 61, 84, 0.08);
 }
 
-.taken-heart {
+.taken-icon {
   position: absolute;
-  left: 28px;
+  left: 22px;
   top: 50%;
+
+  width: clamp(72px, 8vw, 110px);
+  height: auto;
+  display: block;
+  object-fit: contain;
+
   transform: translateY(-50%);
-  color: #c23f6b;
-  font-size: clamp(70px, 8vw, 120px);
-  line-height: 1;
-  filter: drop-shadow(0 3px 3px rgba(129, 40, 71, 0.18));
+  filter: drop-shadow(0 4px 4px rgba(129, 40, 71, 0.2));
+
+  pointer-events: none;
 }
 
 .medicine-button.taken {
-  padding-left: 140px;
+  padding-left: 135px;
 
   border-color: rgba(183, 71, 108, 0.52);
 
