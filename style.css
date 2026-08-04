@@ -161,7 +161,7 @@ button {
   border-radius: 5px;
   background: var(--card-bg);
   color: #000;
-  font-size: clamp(48px, 6vw, 75px);
+  font-size: clamp(48px, 6vw, 70px);
   font-weight: 800;
   cursor: pointer;
 }
@@ -188,12 +188,13 @@ button {
 }
 
 .history-date {
-  font-size: clamp(27px, 3vw, 42px);
+  font-size: clamp(27px, 3vw, 35
+  px);
   font-weight: 800;
 }
 
 .history-entry {
-  padding-left: 48px;
+  padding-left: 20px;
   display: grid;
   grid-template-columns: 150px 1fr;
   gap: 16px;
