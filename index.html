@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#a9e8b9" />
+  <title>お薬の記録</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <h1>お薬の記録</h1>
+
+      <nav class="header-actions" aria-label="画面切り替え">
+        <button id="calendarButton" class="header-button" type="button">カレンダー</button>
+        <button id="settingsButton" class="header-button" type="button">設定</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="mainPanel" class="panel active" aria-label="服薬記録">
+        <div class="main-layout">
+          <section class="regular-area" aria-label="決まった時間のお薬">
+            <div id="regularMedicineList" class="regular-grid"></div>
+          </section>
+
+          <aside class="side-area">
+            <div id="asNeededMedicineList" class="as-needed-list"></div>
+
+            <section class="history-section" aria-label="最近の記録">
+              <div id="historyList" class="history-list"></div>
+
+              <button id="undoButton" class="sub-button" type="button">
+                直前の記録を取り消す
+              </button>
+            </section>
+          </aside>
+        </div>
+      </section>
+
+      <section id="calendarPanel" class="panel page-panel" aria-label="一週間の服薬状況">
+        <div class="page-heading-row">
+          <h2>一週間の記録</h2>
+          <button class="back-button" data-back type="button">戻る</button>
+        </div>
+
+        <div id="calendarList" class="calendar-list"></div>
+      </section>
+
+      <section id="settingsPanel" class="panel page-panel" aria-label="お薬の設定">
+        <div class="page-heading-row">
+          <h2>お薬の設定</h2>
+          <button class="back-button" data-back type="button">戻る</button>
+        </div>
+
+        <form id="medicineForm" class="settings-form">
+          <label for="medicineName">お薬の名前</label>
+          <input id="medicineName" type="text" maxlength="20" autocomplete="off"
+            placeholder="例：朝、寝る前、頭痛の薬" />
+
+          <label for="medicineType">種類</label>
+          <select id="medicineType">
+            <option value="regular">決まった時間のお薬</option>
+            <option value="asNeeded">とんぷく</option>
+          </select>
+
+          <button class="main-button" type="submit">追加する</button>
+        </form>
+
+        <div class="settings-note">
+          決まった時間のお薬は、一日に一度だけ記録できます。<br />
+          とんぷくは、押すたびに時刻つきで記録されます。
+        </div>
+
+        <div id="medicineSettingsList" class="medicine-settings-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
