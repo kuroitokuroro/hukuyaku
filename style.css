@@ -574,3 +574,70 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+/* iPad横画面向け */
+@media (min-width: 901px) and (max-width: 1180px) {
+  .app-header {
+    min-height: 125px;
+    padding: 20px 30px;
+  }
+
+  .app-header h1 {
+    font-size: 58px;
+  }
+
+  .header-actions {
+    gap: 30px;
+  }
+
+  .header-button {
+    min-height: 60px;
+    font-size: 32px;
+  }
+
+  .main-layout {
+    min-height: calc(100vh - 125px);
+    grid-template-columns:
+      minmax(0, 5fr)
+      minmax(350px, 3fr);
+  }
+
+  .regular-area {
+    padding: 34px 28px;
+  }
+
+  .regular-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px 42px;
+  }
+
+  .medicine-button {
+    min-height: 180px;
+    padding: 24px;
+    font-size: 72px;
+  }
+
+  .side-area {
+    padding: 34px 28px;
+  }
+
+  .as-needed-button {
+    min-height: 180px;
+    padding: 20px;
+    font-size: 50px;
+    white-space: nowrap;
+  }
+
+  .as-needed-summary {
+    min-height: 46px;
+    font-size: 26px;
+  }
+
+  .history-section {
+    margin-top: 34px;
+  }
+
+  .empty-message {
+    font-size: 24px;
+  }
+}
