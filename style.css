@@ -188,8 +188,7 @@ button {
 }
 
 .history-date {
-  font-size: clamp(27px, 3vw, 35
-  px);
+  font-size: clamp(27px, 3vw, 35px);
   font-weight: 800;
 }
 
