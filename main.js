@@ -170,7 +170,7 @@ function createAsNeededMedicineCard(medicine) {
   );
 
   if (todayRecords.length === 0) {
-    summary.textContent = "今日はまだ記録がありません";
+    summary.textContent = "今日 0回";
   } else {
     const latest = todayRecords[todayRecords.length - 1];
 
@@ -420,7 +420,7 @@ function deleteMedicine(medicine) {
     recordCount === 0
       ? `「${medicine.name}」を削除しますか？`
       : `「${medicine.name}」を削除しますか？\n\n` +
-        `過去の服薬記録 ${recordCount}件は、履歴として残します。`;
+      `過去の服薬記録 ${recordCount}件は、履歴として残します。`;
 
   if (!confirm(message)) return;
 
@@ -524,7 +524,7 @@ function formatCalendarDate(date, dayOffset) {
   const weekday = ["日", "月", "火", "水", "木", "金", "土"][date.getDay()];
   const suffix =
     dayOffset === 0 ? "・今日" :
-    dayOffset === 1 ? "・昨日" : "";
+      dayOffset === 1 ? "・昨日" : "";
 
   return `${date.getMonth() + 1}月${date.getDate()}日（${weekday}）${suffix}`;
 }
