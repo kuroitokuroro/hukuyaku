@@ -7,7 +7,7 @@ All assets used in this project are either original creations by the author or s
 <h2>母のために作った服薬管理ツール</h2>
 
 タイトル：お薬の記憶<br>
-推奨環境：iPad　safari　chrome<br>
+推奨環境：iPad（横画面）　safari　chrome<br>
 進捗：思いついた<br>
 
 ▼このアプリのターゲット層<br>
